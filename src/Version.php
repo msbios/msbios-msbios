@@ -12,5 +12,5 @@ namespace MSBios;
 abstract class Version
 {
     /** @const NUMBER */
-    const NUMBER = '0.0.1';
+    const NUMBER = '1.0.0';
 }
