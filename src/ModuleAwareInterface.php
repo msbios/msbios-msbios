@@ -8,11 +8,9 @@ namespace MSBios;
 use Zend\ModuleManager\Feature\ConfigProviderInterface;
 
 /**
- * Interface ModuleInterface
+ * Interface ModuleAwareInterface
  * @package MSBios
- * @deprecated use ModuleAwareInterface with Trait
  */
-interface ModuleInterface extends ConfigProviderInterface
+interface ModuleAwareInterface extends ConfigProviderInterface
 {
-
 }
