@@ -1,7 +1,7 @@
 {
   "name": "msbios/msbios",
   "description": "MSBios Library",
-  "license": "GPL",
+  "license": "MIT",
   "keywords": [
     "php"
   ],
