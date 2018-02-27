@@ -9,10 +9,10 @@ use Zend\Loader\AutoloaderFactory;
 use Zend\Loader\StandardAutoloader;
 
 /**
- * Class AutoloaderAwareInterface
+ * Class AutoloaderAwareTrait
  * @package MSBios
  */
-trait AutoloaderAwareInterface
+trait AutoloaderAwareTrait
 {
     /**
      * Return an array for passing to Zend\Loader\AutoloaderFactory.
