@@ -5,6 +5,7 @@
  */
 namespace MSBiosTest;
 
+use MSBios\Version;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -13,5 +14,13 @@ use PHPUnit\Framework\TestCase;
  */
 class VersionTest extends TestCase
 {
-
+    /**
+     * @throws \ReflectionException
+     */
+    public function testCallClass()
+    {
+        /** @var $stub */
+        $stub = $this->getMockForAbstractClass(Version::class);
+        $this->assertInternalType('string', $stub::VERSION);
+    }
 }

@@ -7,6 +7,6 @@ namespace MSBios;
 
 return [
     Module::class => [
-        // Some Config For Module
+        // ...
     ]
 ];

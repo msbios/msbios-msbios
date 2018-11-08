@@ -9,13 +9,13 @@ use Zend\Loader\AutoloaderFactory;
 use Zend\Loader\StandardAutoloader;
 
 /**
- * Class AutoloaderAwareTrait
+ * Trait AutoloaderAwareTrait
  * @package MSBios
  */
 trait AutoloaderAwareTrait
 {
     /**
-     * Return an array for passing to Zend\Loader\AutoloaderFactory.
+     * @inheritdoc
      *
      * @return array
      */

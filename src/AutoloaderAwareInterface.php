@@ -13,4 +13,5 @@ use Zend\ModuleManager\Feature\AutoloaderProviderInterface;
  */
 interface AutoloaderAwareInterface extends AutoloaderProviderInterface
 {
+    // ...
 }

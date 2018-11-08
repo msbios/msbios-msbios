@@ -7,13 +7,12 @@ namespace MSBios;
 
 /**
  * Class Version
+ *
  * @package MSBios
+ * @deprecated Use Module::VERSION
  */
 abstract class Version
 {
-    /**
-     * @const VERSION
-     * @deprecated move to Module
-     */
-    const VERSION = '1.0.5';
+    /** @const VERSION */
+    const VERSION = Module::VERSION;
 }

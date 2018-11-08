@@ -6,15 +6,15 @@
 namespace MSBios;
 
 /**
- * Class ModuleAwareTrait
+ * Trait ModuleAwareTrait
  * @package MSBios
  */
 trait ModuleAwareTrait
 {
     /**
-     * Returns configuration to merge with application configuration
+     * @inheritdoc
      *
-     * @return array|\Traversable
+     * @return mixed
      */
     public function getConfig()
     {

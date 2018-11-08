@@ -13,5 +13,5 @@ use Zend\ModuleManager\Feature\ConfigProviderInterface;
  */
 interface ModuleAwareInterface extends ConfigProviderInterface
 {
-
+    // ...
 }
