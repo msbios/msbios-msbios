@@ -17,6 +17,8 @@ use Zend\Stdlib\ArrayUtils;
 class ModuleFactory implements FactoryInterface
 {
     /**
+     * @inheritdoc
+     *
      * @param ContainerInterface $container
      * @param string $requestedName
      * @param array|null $options
@@ -26,9 +28,11 @@ class ModuleFactory implements FactoryInterface
     {
         /** @var array $defaultOptions */
         $defaultOptions = $container->get('config')[$requestedName];
+
         /** @var array $options */
         $options = is_null($options)
             ? $defaultOptions : ArrayUtils::merge($defaultOptions, $options);
+
         return $options;
     }
 }

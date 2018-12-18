@@ -5,10 +5,10 @@
  */
 namespace MSBiosTest;
 
-use MSBios\AutoloaderAwareInterface;
 use MSBios\Module;
 use MSBios\ModuleInterface;
 use PHPUnit\Framework\TestCase;
+use Zend\ModuleManager\Feature\AutoloaderProviderInterface;
 
 /**
  * Class ModuleTest
@@ -42,7 +42,7 @@ class ModuleTest extends TestCase
      */
     public function testGetAutoloaderConfig()
     {
-        $this->assertInstanceOf(AutoloaderAwareInterface::class, $this->instance);
+        $this->assertInstanceOf(AutoloaderProviderInterface::class, $this->instance);
         $this->assertInternalType('array', $this->instance->getAutoloaderConfig());
     }
 }
