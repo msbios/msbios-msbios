@@ -43,7 +43,8 @@
     "commit": "git add . && git commit -a -m \"Lazy Composer Commiter\" && git push"
   },
   "bin": [
-    "msbios.sh"
+    "msbios.sh",
+    "msbios-commit.sh"
   ],
   "config": {
     "optimize-autoloader": true
