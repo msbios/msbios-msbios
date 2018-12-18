@@ -25,7 +25,8 @@
   },
   "require": {
     "zendframework/zend-loader": "^2.5",
-    "zendframework/zend-modulemanager": "^2.8"
+    "zendframework/zend-modulemanager": "^2.8",
+    "ocramius/package-versions": "^1.3"
   },
   "require-dev": {
     "msbios/test": "^1.0"
@@ -43,5 +44,8 @@
   },
   "bin": [
     "msbios.sh"
-  ]
+  ],
+  "config": {
+    "optimize-autoloader": true
+  }
 }
