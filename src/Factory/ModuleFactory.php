@@ -23,6 +23,7 @@ class ModuleFactory implements FactoryInterface
      * @param string $requestedName
      * @param array|null $options
      * @return array|object
+     * @deprecated move to abstract_factories
      */
     public function __invoke(ContainerInterface $container, $requestedName, array $options = null)
     {

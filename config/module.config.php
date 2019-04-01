@@ -6,6 +6,14 @@
 namespace MSBios;
 
 return [
+
+    'service_manager' => [
+        'abstract_factories' => [
+            ModuleAbstractFactory::class =>
+                new ModuleAbstractFactory
+        ]
+    ],
+
     Module::class => [
         // ...
     ]
