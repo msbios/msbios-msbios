@@ -7,13 +7,12 @@ namespace MSBios;
 
 use Interop\Container\ContainerInterface;
 use Zend\ServiceManager\Factory\AbstractFactoryInterface;
-use Zend\Stdlib\ArrayUtils;
 
 /**
  * Class ModuleAbstractFactory
  * @package MSBios
  */
-class ModuleAbstractFactory implements AbstractFactoryInterface
+class ModuleAbstractFactory extends Factory\ModuleFactory implements AbstractFactoryInterface
 {
     /**
      * @inheritdoc
@@ -28,26 +27,6 @@ class ModuleAbstractFactory implements AbstractFactoryInterface
         $config = $container->get('config');
         return in_array(ModuleInterface::class, class_implements($requestedName), true)
             || isset($config[$requestedName]);
-    }
-
-    /**
-     * @inheritdoc
-     *
-     * @param ContainerInterface $container
-     * @param string $requestedName
-     * @param array|null $options
-     * @return object|void
-     */
-    public function __invoke(ContainerInterface $container, $requestedName, array $options = null)
-    {
-        /** @var array $defaultOptions */
-        $defaultOptions = $container->get('config')[$requestedName];
-
-        /** @var array $options */
-        $options = is_null($options)
-            ? $defaultOptions : ArrayUtils::merge($defaultOptions, $options);
-
-        return $options;
     }
 
     /**
