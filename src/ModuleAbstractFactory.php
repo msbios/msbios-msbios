@@ -25,7 +25,8 @@ class ModuleAbstractFactory extends Factory\ModuleFactory implements AbstractFac
     {
         /** @var array $config */
         $config = $container->get('config');
-        return in_array(ModuleInterface::class, class_implements($requestedName), true)
+        return class_exists($requestedName)
+            && in_array(ModuleInterface::class, class_implements($requestedName), true)
             || isset($config[$requestedName]);
     }
 

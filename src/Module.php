@@ -17,7 +17,7 @@ use Zend\ModuleManager\Feature\AutoloaderProviderInterface;
 class Module implements ModuleInterface, AutoloaderProviderInterface
 {
     /** @const VERSION */
-    const VERSION = '1.0.13';
+    const VERSION = '1.0.14';
 
     /**
      * @return string
