@@ -26,9 +26,6 @@ class ConfigProvider
     /** @const ROUTER */
     const ROUTER = 'router';
 
-    /** @const LISTENERS */
-    const LISTENERS = 'listeners';
-
     /**
      * Provide default configuration.
      *
@@ -38,7 +35,6 @@ class ConfigProvider
     {
         return [
             'dependencies' => $this->getDependencyConfig(),
-            self::LISTENERS => $this->getListenersConfig()
         ];
     }
 
