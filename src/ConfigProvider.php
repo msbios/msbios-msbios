@@ -17,16 +17,16 @@ use Zend\ServiceManager\Factory\InvokableFactory;
  */
 class ConfigProvider
 {
-    /** @const SERVICE_MANAGER  */
+    /** @const SERVICE_MANAGER */
     const SERVICE_MANAGER = 'service_manager';
 
-    /** @const ROUTE_MANAGER  */
+    /** @const ROUTE_MANAGER */
     const ROUTE_MANAGER = 'route_manager';
 
-    /** @const ROUTER  */
+    /** @const ROUTER */
     const ROUTER = 'router';
 
-    /** @const LISTENERS  */
+    /** @const LISTENERS */
     const LISTENERS = 'listeners';
 
     /**
@@ -38,6 +38,7 @@ class ConfigProvider
     {
         return [
             'dependencies' => $this->getDependencyConfig(),
+            self::LISTENERS => $this->getListenersConfig()
         ];
     }
 
@@ -57,6 +58,16 @@ class ConfigProvider
                 ListenerAggregate::class =>
                     InvokableFactory::class
             ]
+        ];
+    }
+
+    /**
+     * @return array
+     */
+    public function getListenersConfig(): array
+    {
+        return [
+            ListenerAggregate::class
         ];
     }
 }

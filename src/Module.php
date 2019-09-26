@@ -17,7 +17,7 @@ use Zend\ModuleManager\Feature\AutoloaderProviderInterface;
 class Module implements ModuleInterface, AutoloaderProviderInterface
 {
     /** @const VERSION */
-    const VERSION = '1.0.17';
+    const VERSION = '1.0.18';
 
     /**
      * @return string
@@ -38,11 +38,13 @@ class Module implements ModuleInterface, AutoloaderProviderInterface
     /**
      * @inheritdoc
      *
-     * @return mixed
+     * @return array|mixed|\Traversable
      */
     public function getConfig()
     {
-        return include $this->getDir() . '/../config/module.config.php';
+        /** @var string $filename */
+        $filename = $this->getDir() . '/../config/module.config.php';
+        return file_exists($filename) ? include $filename : [];
     }
 
     /**
