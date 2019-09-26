@@ -26,6 +26,9 @@ class ConfigProvider
     /** @const ROUTER  */
     const ROUTER = 'router';
 
+    /** @const LISTENERS  */
+    const LISTENERS = 'listeners';
+
     /**
      * Provide default configuration.
      *
