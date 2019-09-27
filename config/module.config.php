@@ -5,26 +5,15 @@
  */
 namespace MSBios;
 
-use Zend\ServiceManager\Factory\InvokableFactory;
+/** @var ConfigProvider $configProvider */
+$configProvider = new ConfigProvider;
 
 return [
 
-    'service_manager' => [
-        'abstract_factories' => [
-            ModuleAbstractFactory::class =>
-                new ModuleAbstractFactory
-        ],
-        'factories' => [
-            ListenerAggregate::class =>
-                InvokableFactory::class
-        ]
-    ],
+    'service_manager' => $configProvider->getDependencyConfig(),
+    'listeners' => $configProvider->getListenersConfig(),
 
     Module::class => [
         // ...
     ],
-
-    'listeners' => [
-        ListenerAggregate::class
-    ]
 ];

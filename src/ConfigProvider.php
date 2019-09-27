@@ -17,15 +17,6 @@ use Zend\ServiceManager\Factory\InvokableFactory;
  */
 class ConfigProvider
 {
-    /** @const SERVICE_MANAGER */
-    const SERVICE_MANAGER = 'service_manager';
-
-    /** @const ROUTE_MANAGER */
-    const ROUTE_MANAGER = 'route_manager';
-
-    /** @const ROUTER */
-    const ROUTER = 'router';
-
     /**
      * Provide default configuration.
      *
@@ -58,6 +49,8 @@ class ConfigProvider
     }
 
     /**
+     * Provide default listeners configuration.
+     *
      * @return array
      */
     public function getListenersConfig(): array
