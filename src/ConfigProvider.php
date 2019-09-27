@@ -56,7 +56,8 @@ class ConfigProvider
     public function getListenersConfig(): array
     {
         return [
-            ListenerAggregate::class
+            ListenerAggregate::class =>
+                ListenerAggregate::class
         ];
     }
 }
