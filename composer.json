@@ -48,5 +48,11 @@
   ],
   "config": {
     "optimize-autoloader": true
+  },
+  "extra": {
+    "zf": {
+      "component": "MSBios",
+      "config-provider": "MSBios\\ConfigProvider"
+    }
   }
 }
