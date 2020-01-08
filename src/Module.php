@@ -6,9 +6,9 @@
 
 namespace MSBios;
 
-use Zend\Loader\AutoloaderFactory;
-use Zend\Loader\StandardAutoloader;
-use Zend\ModuleManager\Feature\AutoloaderProviderInterface;
+use Laminas\Loader\AutoloaderFactory;
+use Laminas\Loader\StandardAutoloader;
+use Laminas\ModuleManager\Feature\AutoloaderProviderInterface;
 
 /**
  * Class Module
@@ -17,12 +17,12 @@ use Zend\ModuleManager\Feature\AutoloaderProviderInterface;
 class Module implements ModuleInterface, AutoloaderProviderInterface
 {
     /** @const VERSION */
-    const VERSION = '1.0.21';
+    const VERSION = '2.0.0';
 
     /**
      * @return string
      */
-    protected function getDir()
+    protected function getDir(): string
     {
         return __DIR__;
     }
@@ -30,7 +30,7 @@ class Module implements ModuleInterface, AutoloaderProviderInterface
     /**
      * @return string
      */
-    protected function getNamespace()
+    protected function getNamespace(): string
     {
         return __NAMESPACE__;
     }
@@ -52,7 +52,7 @@ class Module implements ModuleInterface, AutoloaderProviderInterface
      *
      * @return array
      */
-    public function getAutoloaderConfig()
+    public function getAutoloaderConfig(): array
     {
         return [
             AutoloaderFactory::STANDARD_AUTOLOADER => [

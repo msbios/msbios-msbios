@@ -3,25 +3,26 @@
  * @access protected
  * @author Judzhin Miles <info[woof-woof]msbios.com>
  */
-namespace MSBios;
+namespace MSBios\Factory;
 
 use Interop\Container\ContainerInterface;
-use Zend\ServiceManager\Factory\AbstractFactoryInterface;
+use Laminas\ServiceManager\Factory\AbstractFactoryInterface;
+use MSBios\ModuleInterface;
 
 /**
  * Class ModuleAbstractFactory
- * @package MSBios
+ * @package MSBios\Factory
  */
-class ModuleAbstractFactory extends Factory\ModuleFactory implements AbstractFactoryInterface
+class ModuleAbstractFactory extends ModuleFactory implements AbstractFactoryInterface
 {
     /**
      * @inheritdoc
      *
      * @param ContainerInterface $container
      * @param string $requestedName
-     * @return bool|void
+     * @return bool
      */
-    public function canCreate(ContainerInterface $container, $requestedName)
+    public function canCreate(ContainerInterface $container, $requestedName): bool
     {
         /** @var array $config */
         $config = $container->get('config');
@@ -34,7 +35,7 @@ class ModuleAbstractFactory extends Factory\ModuleFactory implements AbstractFac
      * @param $an_array
      * @return ModuleAbstractFactory
      */
-    public static function __set_state($an_array)
+    public static function __set_state($an_array): self
     {
         return new self();
     }

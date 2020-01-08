@@ -7,8 +7,8 @@
 namespace MSBios\Factory;
 
 use Interop\Container\ContainerInterface;
-use Zend\ServiceManager\Factory\FactoryInterface;
-use Zend\Stdlib\ArrayUtils;
+use Laminas\ServiceManager\Factory\FactoryInterface;
+use Laminas\Stdlib\ArrayUtils;
 
 /**
  * Class ModuleFactory
@@ -23,7 +23,7 @@ class ModuleFactory implements FactoryInterface
      * @param string $requestedName
      * @param array|null $options
      * @return array|object
-     * @deprecated move to abstract_factories
+     * @deprecated this logic moved to AbstractFactory
      */
     public function __invoke(ContainerInterface $container, $requestedName, array $options = null)
     {

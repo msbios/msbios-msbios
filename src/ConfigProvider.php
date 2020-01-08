@@ -6,6 +6,7 @@
 
 namespace MSBios;
 
+use MSBios\Factory\ModuleAbstractFactory;
 use Zend\ServiceManager\Factory\InvokableFactory;
 
 /**

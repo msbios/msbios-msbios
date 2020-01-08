@@ -9,11 +9,6 @@ namespace MSBios;
 $configProvider = new ConfigProvider;
 
 return [
-
     'service_manager' => $configProvider->getDependencyConfig(),
     'listeners' => $configProvider->getListenersConfig(),
-
-    Module::class => [
-        // ...
-    ],
 ];
